@@ -9,4 +9,4 @@
 ## Implimented Algorithm
 - A2C : Fail
 
-### The implementation algorithm code referred to the book [파이토치와 유니티 ML-Agents로 배우는 강화학습]
+#### The implementation algorithm code referred to the book [파이토치와 유니티 ML-Agents로 배우는 강화학습]
