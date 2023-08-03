@@ -18,24 +18,14 @@ action_size = 2
 load_model = False
 train_mode = True
 
-batch_size = 32
-mem_maxlen = 10000
 discount_factor = 0.8
 learning_rate = 0.0000002
 
 run_step = 50000 if train_mode else 0
 test_step = 500
 
-OBS = 2
-
 print_interval = 100
 save_interval = 100
-
-epsilon_eval = 0.05
-epsilon_init = 1.0 if train_mode else epsilon_eval
-epsilon_min = 0.1
-explore_step = run_step * 0.8
-eplsilon_delta = (epsilon_init - epsilon_min)/explore_step if train_mode else 0
 
 game = "HungryCat"
 env_name = "HungryCat/HungryCat"
