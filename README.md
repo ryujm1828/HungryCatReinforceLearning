@@ -8,3 +8,5 @@
 2. The number of Action is 2. (NoJump(0) ,Jump(1))
 ## Implimented Algorithm
 - A2C : Fail
+
+### The implementation algorithm code referred to the book [파이토치와 유니티 ML-Agents로 배우는 강화학습]
