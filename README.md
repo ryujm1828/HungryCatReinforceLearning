@@ -7,6 +7,7 @@
 1. The number of State is 6. (the cat's y-coordinate, the pipe's x-coordinate, the pipe's y-coordinate, the pre-pipe's x-coordinate, the pre-pipe's y-coordinate, the cat's y-velocity)  
 2. The number of Action is 2. (NoJump(0) ,Jump(1))
 ## Implimented Algorithm
-- A2C : Fail
+- A2C : Failed
+- DQN : Failed but better than A2C
 
 #### The implementation algorithm code referred to the book [파이토치와 유니티 ML-Agents로 배우는 강화학습]

@@ -12,14 +12,14 @@ from mlagents_envs.environment import UnityEnvironment, ActionTuple
 from mlagents_envs.side_channel.engine_configuration_channel\
     import EngineConfigurationChannel
 
-state_size = 4
+state_size = 6
 action_size = 2
 
 load_model = False
 train_mode = True
 
 discount_factor = 0.8
-learning_rate = 0.0000002
+learning_rate = 0.00025
 
 run_step = 50000 if train_mode else 0
 test_step = 500
@@ -73,7 +73,6 @@ class A2CAgent:
     def train_model(self,state,action,reward,next_state,done):
         state,action,reward,next_state,done = map(lambda x: torch.FloatTensor(x).to(device),[state,action,reward,next_state,done])
         pi, value = self.a2c(state)
-        print(state)
         with torch.no_grad():
             _,next_value = self.a2c(next_state)
             target_value = reward + discount_factor * next_value

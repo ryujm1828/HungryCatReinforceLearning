@@ -15,15 +15,15 @@ from mlagents_envs.side_channel.engine_configuration_channel\
 state_size = 6
 action_size = 2
 
-load_model = False
-train_mode = True
+load_model = True
+train_mode = False
 
 batch_size = 32
 mem_maxlen = 10000
 discount_factor = 0.9
 learning_rate = 0.0005
 
-run_step = 6000 if train_mode else 0
+run_step = 20000 if train_mode else 0
 test_step = 500
 train_start_step = 10
 target_update_step = 10
@@ -32,7 +32,7 @@ print_interval = 100
 save_interval = 500
 
 epsilon_eval = 0.05
-epsilon_init = 1.0 if train_mode else epsilon_eval
+epsilon_init = 0.05 if train_mode else epsilon_eval
 epsilon_min = 0.01
 explore_step = run_step * 0.8
 epsilon_delta = (epsilon_init - epsilon_min)/explore_step if train_mode else 0
@@ -40,7 +40,7 @@ epsilon_delta = (epsilon_init - epsilon_min)/explore_step if train_mode else 0
 game = "HungryCat"
 env_name = "HungryCat/HungryCat"
 
-loaddate = "20230803151538"
+loaddate = "20230804132829"
 
 date_time = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 save_path = f"./saved_models/{game}/DQN/{date_time}"
